@@ -9,6 +9,10 @@ describe('hashStatic', () => {
     sh.rm('-rf', 'tests/fixtures/basic/processed');
   });
 
+  afterAll(() => {
+    sh.rm('-rf', 'tests/fixtures/basic/processed');
+  });
+
   it('throws an error if entry is invalid', () => {
     expect(
       hashStatic({ entry: 'tests/dist/index.html' })
