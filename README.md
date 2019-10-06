@@ -6,7 +6,7 @@
 
 > Utility to hash static assets.
 
-`hash-static` provides an interface and CLI to minify and hash static assets using [htmlnano](https://github.com/posthtml/htmlnano) and [posthtml-hash](https://github.com/posthtml/posthtml-hash).
+`hash-static` provides a CLI to minify and hash static assets using [htmlnano](https://github.com/posthtml/htmlnano) and [posthtml-hash](https://github.com/posthtml/posthtml-hash).
 
 ## Install
 
@@ -23,6 +23,17 @@ The entry must be an `index.html` file. The path is relative from the current di
 ```bash
 yarn run hash-static 'dist/index.html'
 ```
+
+You can use the CLI as a postbuild script to `package.json`.
+
+```diff
+"scripts": {
+  "build": "rollup -c",
++ "postbuild": "hash-static dist/index.html"
+}
+```
+
+Then, running `yarn build` will automatically run the `postbuild` script.
 
 ### Node
 
