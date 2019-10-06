@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hashStatic hashStatic – matches snapshot (minified) 1`] = `"<html><head><link rel=\\"stylesheet\\" href=\\"style.2d52e1da1da5cc437616.css\\"></head><body></body></html>"`;
+
+exports[`hashStatic hashStatic – matches snapshot (non-minified) 1`] = `
+"<html>
+  <head>
+    <link rel=\\"stylesheet\\" href=\\"style.2d52e1da1da5cc437616.css\\">
+  </head>
+  <body></body>
+</html>
+"
+`;
+
+exports[`hashStatic hashStaticCli – matches snapshot 1`] = `"<html><head><link rel=\\"stylesheet\\" href=\\"style.2d52e1da1da5cc437616.css\\"></head><body></body></html>"`;
