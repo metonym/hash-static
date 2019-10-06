@@ -2,7 +2,7 @@
   "name": "hash-static",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "Hash static assets",
+  "description": "Utility to hash static assets",
   "author": "Eric Liu (https://github.com/metonym)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,6 +12,11 @@
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
     "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "htmlnano": "^0.2.4",
+    "posthtml": "^0.11.6",
+    "posthtml-hash": "^0.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -66,10 +71,5 @@
     "cli.js",
     "lib"
   ],
-  "bugs": "https://github.com/metonym/hash-static/issues",
-  "dependencies": {
-    "htmlnano": "^0.2.4",
-    "posthtml": "^0.11.6",
-    "posthtml-hash": "^0.2.1"
-  }
+  "bugs": "https://github.com/metonym/hash-static/issues"
 }
