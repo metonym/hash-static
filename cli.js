@@ -4,6 +4,6 @@
   try {
     require('./lib').hashStaticCli(process);
   } catch (error) {
-    process.stdout.write(`${error}\n`);
+    process.stderr.write(`${error}\n`);
   }
 })();
