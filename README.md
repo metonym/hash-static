@@ -3,7 +3,9 @@
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
-> Hash static assets.
+> Utility to hash static assets.
+
+`hash-static` provides an interface and CLI to minify and hash static assets using [htmlnano](https://github.com/posthtml/htmlnano) and [posthtml-hash](https://github.com/posthtml/posthtml-hash).
 
 ## Install
 
@@ -13,7 +15,13 @@ yarn add -D hash-static
 
 ## Usage
 
-The entry must be an `index.html` file. The path is relative from your current directory.
+The entry must be an `index.html` file. The path is relative from the current directory.
+
+### CLI
+
+```bash
+yarn run hash-static 'dist/index.html'
+```
 
 ### Node
 
@@ -23,11 +31,14 @@ const { hashStatic } = require('hash-static');
 hashStatic({ entry: 'dist/index.html' });
 ```
 
-### CLI
+### Options
 
-```bash
-yarn run hash-static 'dist/index.html'
-```
+| Name     | Kind                                   | Description                                                    |
+| -------- | -------------------------------------- | -------------------------------------------------------------- |
+| `entry`  | **required** `string`                  | Relative path from the current directory to entry `index.html` |
+| `minify` | optional `boolean` (default is `true`) | Minify `index.html` markup                                     |
+
+## [Changelog](CHANGELOG.md)
 
 ## License
 
