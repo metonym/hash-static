@@ -1,5 +1,6 @@
 # hash-static
 
+[![NPM][npm]][npm-url]
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
@@ -44,6 +45,8 @@ hashStatic({ entry: 'dist/index.html' });
 
 [MIT](LICENSE)
 
+[npm]: https://img.shields.io/npm/v/hash-static.svg?color=blue
+[npm-url]: https://npmjs.com/package/hash-static
 [build]: https://travis-ci.com/metonym/hash-static.svg?branch=master
 [build-badge]: https://travis-ci.com/metonym/hash-static
 [codecov]: https://codecov.io/gh/metonym/hash-static
