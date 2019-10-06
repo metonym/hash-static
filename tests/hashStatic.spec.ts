@@ -6,10 +6,9 @@ import { hashStatic, hashStaticCli } from '../src';
 describe('hashStatic', () => {
   beforeEach(() => {
     process.argv = process.argv.slice(0, 2);
-    sh.rm('-rf', 'tests/fixtures/basic/processed');
   });
 
-  afterAll(() => {
+  afterEach(() => {
     sh.rm('-rf', 'tests/fixtures/basic/processed');
   });
 
