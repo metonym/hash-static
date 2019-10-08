@@ -4,11 +4,14 @@ import posthtml from 'posthtml';
 import { hash } from 'posthtml-hash';
 
 export interface IHashStaticOptions {
-  entry: string; // Entry must be an index.html file
-  minify?: boolean; // Default is true
+  entry: string;
+  minify?: boolean;
 }
 
-const DEFAULT_OPTIONS = { entry: 'dist/index.html', minify: true };
+const DEFAULT_OPTIONS = {
+  entry: 'dist/index.html',
+  minify: true
+};
 
 async function hashStatic(options: IHashStaticOptions) {
   const entry = options.entry || DEFAULT_OPTIONS.entry;
