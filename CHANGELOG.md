@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add ability to pass additional plugins to `posthtml`
 
+## [0.1.1](https://github.com/metonym/hash-static/releases/tag/0.1.1) - 2019-10-13
+
+- Upgrade posthtml version from 0.11.16 to 0.12.0
+
+- Upgrade development dependencies (pretty-quick, husky, typescript)
+
 ## [0.1.0](https://github.com/metonym/hash-static/releases/tag/0.1.0) - 2019-10-06
 
 - Initial release
