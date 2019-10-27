@@ -5,10 +5,12 @@ import { hashStatic, hashStaticCli } from '../src';
 
 describe('hashStatic', () => {
   beforeEach(() => {
+    jest.spyOn(global.console, 'log');
     process.argv = process.argv.slice(0, 2);
   });
 
   afterEach(() => {
+    jest.clearAllMocks();
     sh.rm('-rf', 'tests/fixtures/basic/processed');
   });
 
@@ -30,6 +32,7 @@ describe('hashStatic', () => {
     const entry = 'tests/fixtures/basic/processed/index.html';
     await hashStatic({ entry });
     const html = fs.readFileSync(entry).toString();
+    expect(console.log).toBeCalledTimes(1);
     expect(html).toMatchSnapshot();
   });
 
@@ -43,6 +46,7 @@ describe('hashStatic', () => {
     const entry = 'tests/fixtures/basic/processed/index.html';
     await hashStatic({ entry, minify: false });
     const html = fs.readFileSync(entry).toString();
+    expect(console.log).toBeCalledTimes(1);
     expect(html).toMatchSnapshot();
   });
 
@@ -57,6 +61,7 @@ describe('hashStatic', () => {
     process.argv.push(entry);
     await hashStaticCli(process);
     const html = fs.readFileSync(entry).toString();
+    expect(console.log).toBeCalledTimes(1);
     expect(html).toMatchSnapshot();
   });
 });

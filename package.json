@@ -8,12 +8,13 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "lint": "tslint --fix -p . -c tslint.json",
+    "lint": "tslint --fix -p .",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "htmlnano": "^0.2.4",
     "posthtml": "^0.12.0",
     "posthtml-hash": "^0.2.1"

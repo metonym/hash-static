@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import fs from 'fs';
 import htmlnano from 'htmlnano';
 import posthtml from 'posthtml';
@@ -33,7 +34,8 @@ async function hashStatic(options: IHashStaticOptions) {
   const result = await posthtml(plugins).process(html);
 
   fs.writeFileSync(entry, result.html);
-  process.stdout.write(`Successfully hashed static assets.\n`);
+
+  console.log(chalk.green('Successfully hashed static assets.'));
 }
 
 async function hashStaticCli(process: NodeJS.Process) {
