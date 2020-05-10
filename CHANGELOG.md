@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add ability to pass additional plugins to `posthtml`
 
+## [1.0.0](https://github.com/metonym/hash-static/releases/tag/1.0.0) - 2020-05-10
+
+- Upgrade `posthtml-hash` to v1.0.0
+
 ## [0.1.2](https://github.com/metonym/hash-static/releases/tag/0.1.2) - 2019-10-27
 
 - Use chalk to for statements printed to the console

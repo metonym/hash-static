@@ -7,52 +7,26 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "lint": "tslint --fix -p .",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
-    "prepublishOnly": "yarn build"
+    "prepack": "tsc"
   },
   "dependencies": {
     "chalk": "^3.0.0",
     "htmlnano": "^0.2.4",
     "posthtml": "^0.12.0",
-    "posthtml-hash": "^0.2.1"
+    "posthtml-hash": "^1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@types/jest": "^25.1.1",
+    "@types/jest": "^25.2.1",
     "@types/shelljs": "^0.8.5",
-    "husky": "^4.2.1",
-    "jest": "^25.1.0",
-    "prettier": "^2.0.2",
-    "pretty-quick": "^2.0.0",
-    "shelljs": "^0.8.3",
-    "ts-jest": "^25.2.1",
-    "tslint": "^6.0.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && pretty-quick --staged",
-      "pre-push": "yarn test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true
+    "jest": "25.5.4",
+    "shelljs": "^0.8.4",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.8.3"
   },
   "jest": {
     "preset": "ts-jest"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   },
   "bin": {
     "hash-static": "cli.js"
@@ -62,6 +36,7 @@
     "url": "https://github.com/metonym/hash-static.git"
   },
   "homepage": "https://github.com/metonym/hash-static",
+  "bugs": "https://github.com/metonym/hash-static/issues",
   "keywords": [
     "hash",
     "static",
@@ -71,6 +46,5 @@
   "files": [
     "cli.js",
     "lib"
-  ],
-  "bugs": "https://github.com/metonym/hash-static/issues"
+  ]
 }
