@@ -1,6 +1,6 @@
 {
   "name": "hash-static",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Utility to hash static assets",
   "author": "Eric Liu (https://github.com/metonym)",
